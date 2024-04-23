@@ -75,34 +75,34 @@ It is possible to choose the dataset, inserting the parameter, "brain_tumor" it 
 
 For **Brain Tumor**:
 
-`brownie run .\scripts\setup.py main brain_tumor --network fl-local` 
+`brownie run ./scripts/setup.py main brain_tumor --network fl-local` 
 
 For **Alzheimer**
 
-`brownie run .\scripts\setup.py main --network fl-local` 
+`brownie run ./scripts/setup.py main --network fl-local` 
 
 #### setup after first time
-`brownie run .\scripts\setup.py --network fl-local`
+`brownie run ./scripts/setup.py --network fl-local`
 
 The number of devices is choosen by the constants
 
 ### run collaborator
-`brownie run .\scripts\collaborator.py --network fl-local`
+`brownie run ./scripts/collaborator.py --network fl-local`
 
 It is possible to insert the parameter _"out"_ to randomly select the option _"devices out of battery"_.
 The number of devices out of battery can be selected by the constants, instead the device out of battery and the round which they do not send the weights is randomly select.
 
-`brownie run .\scripts\collaborator.py out --network fl-local`
+`brownie run ./scripts/collaborator.py out --network fl-local`
 
 **Notes**: In this configuration you need to wait 3600 s to validate if a device send the weights or not, it possible to change the time to wait, changing the constants TIMEOUT_SECONDS and TIMEOUT_DEVICES for simulation purpose.
 
 ### run federated_learning
 #### another shell
-`brownie run .\scripts\manager.py --network fl-local`
+`brownie run ./scripts/manager.py --network fl-local`
 
 It is possible to use the parameter _FedProx_ to specify the using of Federated Prox technique.
 
-`brownie run .\scripts\manager.py FedProx --network fl-local`
+`brownie run ./scripts/manager.py FedProx --network fl-local`
 
 ## Experiments Analysis
 In the repo, the notebook experiments_analysis contains all the analysis/plot of the different simulations.
